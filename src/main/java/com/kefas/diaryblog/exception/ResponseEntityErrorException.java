@@ -1,5 +1,6 @@
 package com.kefas.diaryblog.exception;
 
+import com.kefas.diaryblog.response.ApiResponse;
 import org.springframework.http.ResponseEntity;
 
 public class ResponseEntityErrorException extends RuntimeException{

@@ -92,4 +92,5 @@ public class UserPrincipal implements UserDetails {
     public String getLastName() {
         return lastName;
     }
+
 }

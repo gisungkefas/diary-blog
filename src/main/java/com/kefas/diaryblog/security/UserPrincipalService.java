@@ -1,5 +1,6 @@
 package com.kefas.diaryblog.security;
 
+import com.kefas.diaryblog.exception.ResourceNotFoundException;
 import com.kefas.diaryblog.model.user.Users;
 import com.kefas.diaryblog.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class UserPrincipalService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
-        Users users = usersRepository.findByEmail(email).orElseThrow(()-> new ResourceNotFounfException("Email not found"));
+        Users users = usersRepository.findByEmail(email).orElseThrow(()-> new ResourceNotFoundException("Email not found"));
 
         UserPrincipal userPrincipal = null;
         if (users != null){
