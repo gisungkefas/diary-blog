@@ -23,7 +23,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collections;

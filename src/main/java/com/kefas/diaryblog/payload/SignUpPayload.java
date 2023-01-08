@@ -1,5 +1,6 @@
 package com.kefas.diaryblog.payload;
 
+import com.kefas.diaryblog.model.user.Address;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
@@ -15,4 +16,8 @@ public class SignUpPayload {
     private String email;
 
     private String password;
+
+    private Address address;
+
+    private String phoneNumber;
 }
