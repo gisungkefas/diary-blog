@@ -1,9 +1,9 @@
-package sylvestre01.vybediaryblog.service;
+package com.kefas.diaryblog.service;
 
-import sylvestre01.vybediaryblog.Security.UserPrincipal;
-import sylvestre01.vybediaryblog.model.Tag;
-import sylvestre01.vybediaryblog.response.ApiResponse;
-import sylvestre01.vybediaryblog.response.PagedResponse;
+import com.kefas.diaryblog.model.Tag;
+import com.kefas.diaryblog.response.ApiResponse;
+import com.kefas.diaryblog.response.PagedResponse;
+import com.kefas.diaryblog.security.UserPrincipal;
 
 public interface TagService {
 

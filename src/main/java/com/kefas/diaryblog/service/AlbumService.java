@@ -1,12 +1,12 @@
-package sylvestre01.vybediaryblog.service;
+package com.kefas.diaryblog.service;
 
+import com.kefas.diaryblog.model.Album;
+import com.kefas.diaryblog.payload.AlbumPayload;
+import com.kefas.diaryblog.response.AlbumResponse;
+import com.kefas.diaryblog.response.ApiResponse;
+import com.kefas.diaryblog.response.PagedResponse;
+import com.kefas.diaryblog.security.UserPrincipal;
 import org.springframework.http.ResponseEntity;
-import sylvestre01.vybediaryblog.Security.UserPrincipal;
-import sylvestre01.vybediaryblog.model.Album;
-import sylvestre01.vybediaryblog.payload.AlbumPayload;
-import sylvestre01.vybediaryblog.response.AlbumResponse;
-import sylvestre01.vybediaryblog.response.ApiResponse;
-import sylvestre01.vybediaryblog.response.PagedResponse;
 
 public interface AlbumService {
     PagedResponse<AlbumResponse> getAllAlbums(int page, int size);

@@ -1,12 +1,11 @@
-package sylvestre01.vybediaryblog.service;
+package com.kefas.diaryblog.service;
 
+import com.kefas.diaryblog.exception.UnauthorizedException;
+import com.kefas.diaryblog.model.Category;
+import com.kefas.diaryblog.response.ApiResponse;
+import com.kefas.diaryblog.response.PagedResponse;
+import com.kefas.diaryblog.security.UserPrincipal;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import sylvestre01.vybediaryblog.Security.UserPrincipal;
-import sylvestre01.vybediaryblog.exception.UnauthorizedException;
-import sylvestre01.vybediaryblog.model.Category;
-import sylvestre01.vybediaryblog.response.ApiResponse;
-import sylvestre01.vybediaryblog.response.PagedResponse;
 
 public interface CategoryService {
 

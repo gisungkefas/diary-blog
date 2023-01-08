@@ -1,18 +1,18 @@
-package sylvestre01.vybediaryblog.service;
+package com.kefas.diaryblog.service;
 
-import sylvestre01.vybediaryblog.Security.UserPrincipal;
-import sylvestre01.vybediaryblog.model.Post;
-import sylvestre01.vybediaryblog.response.ApiResponse;
-import sylvestre01.vybediaryblog.response.PagedResponse;
-import sylvestre01.vybediaryblog.payload.PostPayload;
-import sylvestre01.vybediaryblog.response.PostResponse;
 
+import com.kefas.diaryblog.model.Post;
+import com.kefas.diaryblog.payload.PostPayload;
+import com.kefas.diaryblog.response.ApiResponse;
+import com.kefas.diaryblog.response.PagedResponse;
+import com.kefas.diaryblog.response.PostResponse;
+import com.kefas.diaryblog.security.UserPrincipal;
 
 public interface PostService {
 
     PagedResponse<Post> getAllPosts(int page, int size);
 
-    PagedResponse<Post> getPostsByCreatedBy(String username, int page, int size);
+    PagedResponse<Post> getPostsByCreatedBy(String email, int page, int size);
 
     PagedResponse<Post> getPostsByCategory(Long id, int page, int size);
 

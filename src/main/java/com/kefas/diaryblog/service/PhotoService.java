@@ -1,10 +1,10 @@
-package sylvestre01.vybediaryblog.service;
+package com.kefas.diaryblog.service;
 
-import sylvestre01.vybediaryblog.Security.UserPrincipal;
-import sylvestre01.vybediaryblog.response.ApiResponse;
-import sylvestre01.vybediaryblog.response.PagedResponse;
-import sylvestre01.vybediaryblog.payload.PhotoPayload;
-import sylvestre01.vybediaryblog.response.PhotoResponse;
+import com.kefas.diaryblog.payload.PhotoPayload;
+import com.kefas.diaryblog.response.ApiResponse;
+import com.kefas.diaryblog.response.PagedResponse;
+import com.kefas.diaryblog.response.PhotoResponse;
+import com.kefas.diaryblog.security.UserPrincipal;
 
 public interface PhotoService {
 
@@ -19,5 +19,4 @@ public interface PhotoService {
     ApiResponse deletePhoto(Long id, UserPrincipal currentUser);
 
     PagedResponse<PhotoResponse> getAllPhotosByAlbum(Long albumId, int page, int size);
-
 }

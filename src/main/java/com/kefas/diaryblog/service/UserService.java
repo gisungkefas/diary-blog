@@ -1,29 +1,27 @@
-package sylvestre01.vybediaryblog.service;
+package com.kefas.diaryblog.service;
 
-import sylvestre01.vybediaryblog.Security.UserPrincipal;
-import sylvestre01.vybediaryblog.model.user.User;
-import sylvestre01.vybediaryblog.payload.*;
-import sylvestre01.vybediaryblog.response.ApiResponse;
+import com.kefas.diaryblog.model.user.Users;
+import com.kefas.diaryblog.payload.*;
+import com.kefas.diaryblog.response.ApiResponse;
+import com.kefas.diaryblog.security.UserPrincipal;
 
 public interface UserService {
 
     UserSummaryPayload getCurrentUser(UserPrincipal currentUser);
 
-    User addUser(UserPayload user);
+    Users addUser(UserPayload user);
 
-    ApiResponse deleteUser(String username, UserPrincipal currentUser);
+    ApiResponse deleteUser(String email, UserPrincipal currentUser);
 
-    User updateUser(User newUser, String username, UserPrincipal currentUser);
-
-    UserIdentityAvailability checkUsernameAvailability(String username);
+    Users updateUser(Users newUser, String email, UserPrincipal currentUser);
 
     UserIdentityAvailability checkEmailAvailability(String email);
 
-    UserProfilePayload getUserProfile(String username);
+    UserProfilePayload getUserProfile(String email);
 
-    ApiResponse giveAdmin(String username);
+    ApiResponse giveAdmin(String email);
 
-    ApiResponse removeAdmin(String username);
+    ApiResponse removeAdmin(String email);
 
     UserProfilePayload setOrUpdateInfo(UserPrincipal currentUser, InfoPayload infoRequest);
 

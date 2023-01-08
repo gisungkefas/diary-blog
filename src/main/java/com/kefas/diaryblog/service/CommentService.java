@@ -1,10 +1,10 @@
-package sylvestre01.vybediaryblog.service;
+package com.kefas.diaryblog.service;
 
-import sylvestre01.vybediaryblog.Security.UserPrincipal;
-import sylvestre01.vybediaryblog.model.Comment;
-import sylvestre01.vybediaryblog.response.ApiResponse;
-import sylvestre01.vybediaryblog.payload.CommentPayload;
-import sylvestre01.vybediaryblog.response.PagedResponse;
+import com.kefas.diaryblog.model.Comment;
+import com.kefas.diaryblog.payload.CommentPayload;
+import com.kefas.diaryblog.response.ApiResponse;
+import com.kefas.diaryblog.response.PagedResponse;
+import com.kefas.diaryblog.security.UserPrincipal;
 
 public interface CommentService {
     PagedResponse<Comment> getAllComments(Long postId, int page, int size);

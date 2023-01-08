@@ -1,4 +1,4 @@
-package sylvestre01.vybediaryblog.utils;
+package com.kefas.diaryblog.utils;
 
 public class AppConstant {
 
