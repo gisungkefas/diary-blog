@@ -28,6 +28,6 @@ public class UserProfilePayload {
 
     private String website;
 
-    public UserProfilePayload(Long id, String username, String firstName, String lastName, Instant now, String email, Address address, String phone, String website, Long postCount) {
+    public UserProfilePayload(Long id, String firstName, String lastName, Instant now, String email, Address address, String phoneNumber, String webSite, Long postCount) {
     }
 }
