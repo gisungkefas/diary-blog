@@ -2,6 +2,7 @@ package com.kefas.diaryblog.cache;
 
 import com.kefas.diaryblog.eventListener.OnUserLogoutSuccessEvent;
 import com.kefas.diaryblog.security.JwtTokenProvider;
+import net.jodah.expiringmap.ExpiringMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

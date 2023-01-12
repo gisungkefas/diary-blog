@@ -8,6 +8,7 @@ import com.kefas.diaryblog.repository.UsersRepository;
 import com.kefas.diaryblog.response.ApiResponse;
 import com.kefas.diaryblog.response.LoginResponse;
 import com.kefas.diaryblog.response.UserRegistrationResponse;
+import com.kefas.diaryblog.security.JwtTokenProvider;
 import com.kefas.diaryblog.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;

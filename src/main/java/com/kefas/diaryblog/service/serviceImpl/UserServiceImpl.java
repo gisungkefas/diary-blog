@@ -15,8 +15,11 @@ import com.kefas.diaryblog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import javax.validation.Valid;
 import java.time.Instant;
 import java.time.LocalDateTime;
 
@@ -66,17 +69,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Users updateUser(Users newUser, String email, UserPrincipal currentUser) {
+    public Users updateUser(@Valid User newUser, String email, UserPrincipal currentUser) {
 
         Users users = usersRepository.getUsersByName(email);
         if(users.getId().equals(currentUser.getId()) || currentUser.getAuthorities().contains(new SimpleGrantedAuthority(Role.ADMIN.toString()))){
 
-            users.setFirstName(newUser.getFirstName());
-            users.setLastName(newUser.getLastName());
-            users.setPassword(newUser.getPassword());
-            users.setAddress(newUser.getAddress());
-            users.setPhoneNumber(newUser.getPhoneNumber());
-            users.setWebSite(newUser.getWebSite());
+            users.setFirstName(users.getFirstName());
+            users.setLastName(users.getLastName());
+            users.setPassword(users.getPassword());
+            users.setAddress(users.getAddress());
+            users.setPhoneNumber(users.getPhoneNumber());
+            users.setWebSite(users.getWebSite());
             return usersRepository.save(users);
         }
         ApiResponse apiResponse = new ApiResponse("You don't have permission to update the profile of: "+ email, LocalDateTime.now());
